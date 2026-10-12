@@ -1,0 +1,21 @@
+# Cloudflare Pages Custom Headers Configuration
+# Documentation: https://developers.cloudflare.com/pages/configuration/headers/
+
+# 1. Global Security Headers & HTML Freshness for all routes
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 2. Immutable Cache for Production Hashed Assets (JS, CSS, fonts)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 3. Prevent Search Engine Indexing on Preview & *.pages.dev Subdomains
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
