@@ -57,11 +57,16 @@ export function updateSEO({ title, description, path, robots = 'index, follow', 
   setMetaTag('meta[property="og:url"]', 'property', 'og:url', canonicalUrl);
   setMetaTag('meta[property="og:type"]', 'property', 'og:type', 'website');
   setMetaTag('meta[property="og:site_name"]', 'property', 'og:site_name', 'MGMLCalculator.com');
+  setMetaTag('meta[property="og:image"]', 'property', 'og:image', `${BASE_URL}/og-image.png`);
+  setMetaTag('meta[property="og:image:width"]', 'property', 'og:image:width', '1024');
+  setMetaTag('meta[property="og:image:height"]', 'property', 'og:image:height', '512');
+  setMetaTag('meta[property="og:image:alt"]', 'property', 'og:image:alt', 'MGMLCalculator.com - Convert, Compare, Learn');
 
   // 6. Twitter Meta Tags
-  setMetaTag('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary');
+  setMetaTag('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image');
   setMetaTag('meta[name="twitter:title"]', 'name', 'twitter:title', title);
   setMetaTag('meta[name="twitter:description"]', 'name', 'twitter:description', description);
+  setMetaTag('meta[name="twitter:image"]', 'name', 'twitter:image', `${BASE_URL}/og-image.png`);
 
   // 7. Structured Data (JSON-LD)
   let scriptEl = document.querySelector('script[type="application/ld+json"]#seo-schema');

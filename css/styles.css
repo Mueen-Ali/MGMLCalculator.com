@@ -209,6 +209,32 @@ main {
   letter-spacing: -0.02em;
 }
 
+.site-logo {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  transition: opacity var(--transition-fast);
+}
+
+.brand-logo:hover .site-logo {
+  opacity: 0.9;
+}
+
+.footer-logo {
+  height: 40px;
+  max-width: 160px;
+  margin-bottom: var(--space-xs);
+}
+
+@media (max-width: 640px) {
+  .site-logo {
+    height: 40px;
+    max-width: 155px;
+  }
+}
+
 .brand-logo:hover {
   text-decoration: none;
   color: var(--color-primary);

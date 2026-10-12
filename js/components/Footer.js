@@ -8,6 +8,7 @@ export function renderFooter() {
     ? import.meta.env.BASE_URL.replace(/\/$/, '')
     : '';
   const homeHref = base ? `${base}/` : '/';
+  const logoSrc = base ? `${base}/logo.png` : '/logo.png';
 
   return `
     <footer class="site-footer" id="site-footer">
@@ -16,8 +17,7 @@ export function renderFooter() {
           <!-- Brand & Short Description -->
           <div class="footer-brand">
             <a href="${homeHref}" class="brand-logo" aria-label="MGMLCalculator.com Home" data-link>
-              <span class="logo-badge">mg</span>
-              <span>MGMLCalculator<span class="logo-domain">.com</span></span>
+              <img src="${logoSrc}" alt="MGMLCalculator.com" class="site-logo footer-logo" width="150" height="48" loading="lazy" />
             </a>
             <p>
               A clean, accurate, and educational mathematical unit conversion utility for converting milligrams (mg) and milliliters (mL).

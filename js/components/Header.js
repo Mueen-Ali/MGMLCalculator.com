@@ -32,14 +32,14 @@ export function renderHeader(currentPath = '/') {
     .join('');
 
   const homeHref = base ? `${base}/` : '/';
+  const logoSrc = base ? `${base}/logo.png` : '/logo.png';
 
   return `
     <header class="site-header" id="site-header">
       <div class="container">
         <div class="header-inner">
           <a href="${homeHref}" class="brand-logo" aria-label="MGMLCalculator.com Home" data-link>
-            <span class="logo-badge">mg</span>
-            <span>MGMLCalculator<span class="logo-domain">.com</span></span>
+            <img src="${logoSrc}" alt="MGMLCalculator.com" class="site-logo" width="168" height="54" />
           </a>
 
           <nav aria-label="Main Navigation">
