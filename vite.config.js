@@ -6,18 +6,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 function getBasePath() {
-  const rawBase = process.env.BASE_PATH || process.env.VITE_BASE_PATH;
-  if (rawBase && rawBase.trim() !== '') {
-    let b = rawBase.trim();
-    if (!b.startsWith('/')) b = '/' + b;
-    if (!b.endsWith('/')) b = b + '/';
-    return b;
+  if (process.env.BASE_PATH !== undefined) {
+    const b = process.env.BASE_PATH.trim();
+    if (!b || b === '/') return '/';
+    return b.startsWith('/') ? (b.endsWith('/') ? b : `${b}/`) : `/${b}/`;
   }
-  if (process.env.GITHUB_REPOSITORY) {
-    const repoName = process.env.GITHUB_REPOSITORY.split('/')[1];
-    if (repoName && !repoName.toLowerCase().endsWith('.github.io')) {
-      return `/${repoName}/`;
-    }
+  if (process.env.VITE_BASE_PATH !== undefined) {
+    const b = process.env.VITE_BASE_PATH.trim();
+    if (!b || b === '/') return '/';
+    return b.startsWith('/') ? (b.endsWith('/') ? b : `${b}/`) : `/${b}/`;
   }
   return '/';
 }
