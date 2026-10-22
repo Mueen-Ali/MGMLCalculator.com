@@ -13,7 +13,7 @@ export function renderMgToMlDrugConversionPage() {
     <!-- Page Hero -->
     <section class="page-hero">
       <span class="badge">Educational Conversion Reference</span>
-      <h1>MG to ML Drug Conversion: Understanding Concentration</h1>
+      <h1>MG to ML Drug Conversion: Reading Labels &amp; Understanding Concentration</h1>
       <p class="lead">
         An educational guide explaining how solution concentration (mg/mL) mathematically relates mass in milligrams (mg) to liquid volume in milliliters (mL).
       </p>
@@ -183,6 +183,36 @@ export function renderMgToMlDrugConversionPage() {
       <p style="font-size: 0.875rem; color: var(--color-text-muted);">
         <em>Note: This 10&times; rule applies strictly to % w/v (weight per volume). It does not apply to % w/w (weight per weight) or % v/v (volume per volume) formulations, which require density measurements.</em>
       </p>
+
+      <!-- Educational Callout: Total Bottle Content vs. Concentration per mL -->
+      <div class="card card-surface" style="margin-top: var(--space-lg); margin-bottom: var(--space-md); border-left: 4px solid var(--color-primary);">
+        <h4 style="margin-top: 0; margin-bottom: var(--space-xs); font-size: 1.05rem;">
+          Important Distinction: Total Bottle Content vs. Concentration per mL
+        </h4>
+        <p style="margin-bottom: var(--space-sm);">
+          A common mistake when reading medication and liquid solution packaging is confusing the <strong>total active ingredient in the whole container</strong> with the <strong>concentration per milliliter</strong>.
+        </p>
+        <p style="margin-bottom: var(--space-sm);">
+          For example, if a bottle label states <strong>500 mg total active ingredient in 100 mL</strong>, the concentration is <strong>not</strong> 500 mg/mL. Assuming the total amount is distributed evenly in the final 100 mL volume, the actual concentration is:
+        </p>
+        <div class="result-formula-box" style="margin-bottom: var(--space-sm); text-align: center; font-weight: 700;">
+          500 mg &divide; 100 mL = 5 mg/mL
+        </div>
+        <p style="margin-bottom: 0; font-size: 0.875rem; color: var(--color-text-muted);">
+          Always verify whether the milligram figure on a product label refers to the entire container volume or the unit strength per milliliter (mg/mL) before computing dosages or volumes.
+        </p>
+      </div>
+
+      <!-- Contextual Link to Calculator -->
+      <div class="card card-surface" style="margin-top: var(--space-md); margin-bottom: var(--space-xs); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-md);">
+        <div>
+          <strong>Ready to calculate liquid volume from your label's concentration?</strong>
+          <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">
+            Once you have determined the solution strength in mg/mL from the packaging, use our calculator to find the exact volume in milliliters.
+          </p>
+        </div>
+        <a href="/mg-to-ml/" class="btn btn-primary" data-link>Calculate Volume in MG to ML Calculator &rarr;</a>
+      </div>
     </section>
 
     <!-- 5. Why the Same Volume Can Contain Different Amounts -->

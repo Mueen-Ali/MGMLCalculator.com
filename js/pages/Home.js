@@ -10,14 +10,180 @@ export function renderHomePage() {
     <!-- Page Hero -->
     <section class="page-hero">
       <span class="badge">Precision Mathematical Unit Utility</span>
-      <h1>MG to ML Conversion: Calculator, Formula &amp; Examples</h1>
+      <h1>MG to ML Conversion Hub &amp; Calculators</h1>
       <p class="lead">
-        A clean, fast, and free online mg to ml calculator to convert milligrams to milliliters and milliliters to milligrams based on liquid solution concentration. Easily convert mg to ml for any liquid strength.
+        A comprehensive mathematical conversion hub for converting milligrams (mg) to milliliters (mL) and milliliters to milligrams based on liquid solution concentration. Use our quick converter below or explore dedicated calculator tools and reference charts.
       </p>
     </section>
 
     <!-- Interactive Calculator Component -->
-    ${renderCalculator('mg-to-ml')}
+    <section class="calculator-card" id="calculator-card" aria-label="Quick MG to ML and ML to MG Conversion Calculator">
+      <div class="calculator-header">
+        <h2 class="calculator-title" id="calc-title">
+          Quick MG to ML Converter
+        </h2>
+        <div class="calculator-tab-group" role="tablist" aria-label="Conversion Mode">
+          <button 
+            type="button" 
+            class="calculator-tab active" 
+            id="tab-mg-to-ml" 
+            role="tab" 
+            aria-selected="true"
+            aria-controls="calculator-form"
+            data-mode="mg-to-ml"
+          >mg to mL</button>
+          <button 
+            type="button" 
+            class="calculator-tab" 
+            id="tab-ml-to-mg" 
+            role="tab" 
+            aria-selected="false"
+            aria-controls="calculator-form"
+            data-mode="ml-to-mg"
+          >mL to mg</button>
+        </div>
+      </div>
+
+      <form id="calculator-form" class="calculator-form" novalidate>
+        <div class="calc-inputs-grid">
+          <!-- Primary Input Field (Mass or Volume) -->
+          <div class="form-group" id="group-primary-value">
+            <label for="input-primary-value" class="form-label" id="label-primary-value">
+              Mass (mg)
+            </label>
+            <div class="input-with-unit">
+              <input 
+                type="text" 
+                inputmode="decimal" 
+                id="input-primary-value" 
+                class="form-control" 
+                placeholder="e.g. 100" 
+                aria-describedby="error-primary-value"
+                autocomplete="off"
+              />
+              <span class="unit-badge" id="badge-primary-unit">mg</span>
+            </div>
+            <div class="input-error-msg" id="error-primary-value" role="alert" aria-live="polite"></div>
+          </div>
+
+          <!-- Secondary Input Field (Concentration) -->
+          <div class="form-group" id="group-concentration-value">
+            <label for="input-concentration-value" class="form-label" id="label-concentration">
+              Concentration (mg/mL)
+            </label>
+            <div class="input-with-unit">
+              <input 
+                type="text" 
+                inputmode="decimal" 
+                id="input-concentration-value" 
+                class="form-control" 
+                placeholder="e.g. 20" 
+                aria-describedby="error-concentration-value"
+                autocomplete="off"
+              />
+              <span class="unit-badge">mg/mL</span>
+            </div>
+            <div class="input-error-msg" id="error-concentration-value" role="alert" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="calc-actions-row">
+          <button type="submit" class="btn btn-primary btn-calc" id="btn-calculate">
+            Calculate Volume
+          </button>
+          <button type="button" class="btn btn-outline btn-reset" id="btn-reset" aria-label="Clear calculator inputs">
+            Clear
+          </button>
+        </div>
+      </form>
+
+      <!-- Result Card -->
+      <div class="calc-result-card" id="calc-result-card" style="display: none;" aria-live="polite">
+        <div class="result-label">Conversion Result</div>
+        <div class="result-value-display">
+          <span class="result-number" id="result-number">0</span>
+          <span class="result-unit" id="result-unit">mL</span>
+        </div>
+        <div class="result-explanation" id="result-explanation"></div>
+        <div class="result-formula-box">
+          <div class="formula-line">
+            <strong>Calculation:</strong> <span id="result-math-step"></span>
+          </div>
+          <div class="formula-line text-muted">
+            <strong>Formula:</strong> <span id="result-formula-text"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contextual Link to Dedicated Calculator Tool -->
+    <div class="card card-surface" style="margin-top: var(--space-md); margin-bottom: var(--space-lg); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-md);">
+      <div>
+        <strong>Need a dedicated calculator with step-by-step math?</strong>
+        <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">
+          Use our standalone mass-to-volume tool for focused calculations, complete formula steps, and worked examples.
+        </p>
+      </div>
+      <a href="/mg-to-ml/" class="btn btn-primary" data-link>Open MG to ML Calculator &rarr;</a>
+    </div>
+
+    <!-- Compact Neutral Informational Strip -->
+    <div class="calc-info-strip">
+      <svg class="info-strip-icon" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <span>
+        <strong>MG and mL measure different things.</strong> mg measures mass, while mL measures volume. A conversion between them requires a concentration expressed in mg/mL.
+      </span>
+    </div>
+
+    <!-- Small Educational Disclaimer -->
+    <div class="calc-disclaimer-strip">
+      <p>
+        This calculator provides mathematical conversions only. It does not determine medication doses or provide personalized medical advice. For medication use, verify the concentration on the product label and follow guidance from a qualified healthcare professional.
+      </p>
+    </div>
+
+    <!-- Common Conversion Examples Section -->
+    <section class="card" style="margin-bottom: var(--space-2xl);">
+      <h3 style="margin-top: 0;">Common mg to mL Conversion Examples</h3>
+      <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: var(--space-md);">
+        The sample calculations below demonstrate how mass converts into liquid volume using an assumed concentration of <strong>10 mg/mL</strong>. Click "Try Example" to populate the calculator above.
+      </p>
+
+      <div class="table-responsive">
+        <table class="examples-table">
+          <thead>
+            <tr>
+              <th scope="col">Mass (mg)</th>
+              <th scope="col">Sample Concentration</th>
+              <th scope="col">Calculated Volume (mL)</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>10 mg</strong></td>
+              <td>10 mg/mL</td>
+              <td><strong>1 mL</strong></td>
+              <td><button type="button" class="btn-sample" data-mg="10" data-conc="10">Try Example</button></td>
+            </tr>
+            <tr>
+              <td><strong>25 mg</strong></td>
+              <td>10 mg/mL</td>
+              <td><strong>2.5 mL</strong></td>
+              <td><button type="button" class="btn-sample" data-mg="25" data-conc="10">Try Example</button></td>
+            </tr>
+            <tr>
+              <td><strong>50 mg</strong></td>
+              <td>10 mg/mL</td>
+              <td><strong>5 mL</strong></td>
+              <td><button type="button" class="btn-sample" data-mg="50" data-conc="10">Try Example</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <!-- Section 1: What Can You Calculate? -->
     <section style="margin-bottom: var(--space-2xl);">
@@ -148,112 +314,18 @@ export function renderHomePage() {
       </p>
     </div>
 
-    <!-- Section 4: Popular MG to ML Conversions (Boxed Card Table Section) -->
+    <!-- Section 4: Conversion Reference Charts -->
     <section class="card" style="margin-bottom: var(--space-2xl);">
-      <h2 style="margin-top: 0;">Popular MG to ML Conversions</h2>
-      <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: var(--space-md);">
-        The tables below illustrate common metric calculations for standard milligram and milliliter amounts.
+      <h2 style="margin-top: 0;">Pre-Calculated Conversion Reference Charts</h2>
+      <p style="color: var(--color-text-muted); margin-bottom: var(--space-md);">
+        Converting milligrams to milliliters depends on the exact solution concentration. If you need reference values across multiple liquid strengths without calculating each one manually, consult our comprehensive reference charts.
       </p>
-      <p style="font-size: 0.875rem; color: var(--color-text-muted); background-color: var(--color-bg-surface); padding: var(--space-sm) var(--space-md); border-left: 3px solid var(--color-primary); border-radius: var(--radius-sm); margin-bottom: var(--space-md);">
-        <strong>Example only:</strong> These results use a concentration of <strong>10 mg/mL</strong>. There is no universal mg-to-mL conversion; changing the concentration changes the result.
+      <p style="margin-bottom: var(--space-md);">
+        Explore interactive and static lookup tables covering standard solution strengths from 1 mg/mL up to 100 mg/mL in our <a href="/mg-to-ml-conversion-chart/" data-link><strong>MG to ML Conversion Chart</strong></a>.
       </p>
-
-      <div class="grid-2" style="gap: var(--space-lg); margin-bottom: var(--space-md);">
-        <!-- MG to ML Table -->
-        <div>
-          <h3 style="font-size: 1.1rem; margin-bottom: var(--space-sm);">Mass to Volume (at 10 mg/mL)</h3>
-          <div class="table-responsive">
-            <table class="examples-table">
-              <thead>
-                <tr>
-                  <th scope="col">Mass (mg)</th>
-                  <th scope="col">Concentration</th>
-                  <th scope="col">Calculated Volume (mL)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>1 mg</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>0.1 mL</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>2.5 mg</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>0.25 mL</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>5 mg</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>0.5 mL</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>10 mg</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>1 mL</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>25 mg</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>2.5 mL</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>50 mg</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>5 mL</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>100 mg</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>10 mL</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- ML to MG Table -->
-        <div>
-          <h3 style="font-size: 1.1rem; margin-bottom: var(--space-sm);">Volume to Mass (at 10 mg/mL)</h3>
-          <div class="table-responsive">
-            <table class="examples-table">
-              <thead>
-                <tr>
-                  <th scope="col">Volume (mL)</th>
-                  <th scope="col">Concentration</th>
-                  <th scope="col">Calculated Mass (mg)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>1 mL</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>10 mg</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>2.5 mL</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>25 mg</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>5 mL</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>50 mg</strong></td>
-                </tr>
-                <tr>
-                  <td><strong>10 mL</strong></td>
-                  <td>10 mg/mL</td>
-                  <td><strong>100 mg</strong></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+      <div>
+        <a href="/mg-to-ml-conversion-chart/" class="btn btn-outline" data-link>View Full MG to ML Conversion Chart &rarr;</a>
       </div>
-
-      <p style="margin-top: var(--space-sm); margin-bottom: 0;">
-        For additional concentrations and values, explore the <a href="/mg-to-ml-conversion-chart/" data-link>MG to ML Conversion Chart</a>.
-      </p>
     </section>
 
     <!-- Section 5: Why Concentration Matters (Editorial Style) -->

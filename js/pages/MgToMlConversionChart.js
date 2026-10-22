@@ -90,6 +90,71 @@ export function renderMgToMlConversionChartPage() {
       ${renderInteractiveChart(10)}
 
       <h3 style="font-size: 1.15rem; margin-top: var(--space-xl); margin-bottom: var(--space-xs);">
+        Multi-Concentration Comparison Matrix
+      </h3>
+      <p>
+        The static comparison table below maps key mass amounts across four common solution concentrations (2 mg/mL, 5 mg/mL, 10 mg/mL, and 20 mg/mL) calculated using the formula <em>Volume (mL) = Mass (mg) &divide; Concentration (mg/mL)</em>:
+      </p>
+
+      <div class="table-responsive" style="margin-bottom: var(--space-lg);">
+        <table class="examples-table">
+          <thead>
+            <tr>
+              <th scope="col">Target Mass (mg)</th>
+              <th scope="col">At 2 mg/mL</th>
+              <th scope="col">At 5 mg/mL</th>
+              <th scope="col">At 10 mg/mL</th>
+              <th scope="col">At 20 mg/mL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1 mg</strong></td>
+              <td>0.5 mL</td>
+              <td>0.2 mL</td>
+              <td>0.1 mL</td>
+              <td>0.05 mL</td>
+            </tr>
+            <tr>
+              <td><strong>5 mg</strong></td>
+              <td>2.5 mL</td>
+              <td>1 mL</td>
+              <td>0.5 mL</td>
+              <td>0.25 mL</td>
+            </tr>
+            <tr>
+              <td><strong>10 mg</strong></td>
+              <td>5 mL</td>
+              <td>2 mL</td>
+              <td>1 mL</td>
+              <td>0.5 mL</td>
+            </tr>
+            <tr>
+              <td><strong>25 mg</strong></td>
+              <td>12.5 mL</td>
+              <td>5 mL</td>
+              <td>2.5 mL</td>
+              <td>1.25 mL</td>
+            </tr>
+            <tr>
+              <td><strong>50 mg</strong></td>
+              <td>25 mL</td>
+              <td>10 mL</td>
+              <td>5 mL</td>
+              <td>2.5 mL</td>
+            </tr>
+            <tr>
+              <td><strong>100 mg</strong></td>
+              <td>50 mL</td>
+              <td>20 mL</td>
+              <td>10 mL</td>
+              <td>5 mL</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size: 1.15rem; margin-top: var(--space-lg); margin-bottom: var(--space-xs);">
         Static Reference Table at 10 mg/mL Concentration
       </h3>
       <p>
@@ -195,7 +260,7 @@ export function renderMgToMlConversionChartPage() {
         <em>Note: These are mathematical conversion examples, not medication dosing recommendations.</em>
       </p>
       <p>
-        A more concentrated solution holds more milligrams per milliliter, so less liquid volume is required to supply the same total mass. For further explanations on reading strength specifications on liquid containers, read our guide to <a href="/mg-to-ml-drug-conversion/" data-link>understanding concentration</a>.
+        A more concentrated solution holds more milligrams per milliliter, so less liquid volume is required to supply the same total mass. For further explanations on reading strength specifications on liquid containers, read our guide to <a href="/mg-to-ml-drug-conversion/" data-link>reading medicine labels &amp; concentration</a>.
       </p>
     </section>
 
@@ -210,8 +275,18 @@ export function renderMgToMlConversionChartPage() {
         <li><strong>Unique concentration ratios:</strong> When working with products that specify concentrations such as 15 mg/mL, 37.5 mg/mL, or 250 mg per 5 mL.</li>
         <li><strong>Reverse calculations:</strong> When you know the liquid volume in milliliters and need to calculate total mass in milligrams.</li>
       </ul>
-      <p>
-        To perform custom conversions from mass to volume, use our primary <a href="/mg-to-ml/" data-link>MG to ML calculator</a>. To calculate mass from liquid volume, use our dedicated <a href="/ml-to-mg/" data-link>ML to MG calculator</a>.
+      <div class="card card-surface" style="margin-top: var(--space-md); margin-bottom: var(--space-md); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-md);">
+        <div>
+          <strong>Need to calculate a custom or non-standard value?</strong>
+          <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">
+            If your target mass (e.g. 3.75 mg, 12.5 mg) or liquid concentration doesn't appear in the reference tables, use our instant converter.
+          </p>
+        </div>
+        <a href="/mg-to-ml/" class="btn btn-primary" data-link>Open MG to ML Calculator &rarr;</a>
+      </div>
+
+      <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0;">
+        To calculate mass from liquid volume instead, visit our dedicated <a href="/ml-to-mg/" data-link>ML to MG calculator</a>.
       </p>
     </section>
 
