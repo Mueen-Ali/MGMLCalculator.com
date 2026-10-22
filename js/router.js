@@ -25,8 +25,8 @@ import { renderContactPage } from './pages/Contact.js';
 // Route Definitions with Configurable SEO Metadata & Structured Data
 export const ROUTES = {
   '/': {
-    title: 'MGMLCalculator.com | MG to ML & ML to MG Calculator',
-    description: 'Free online mathematical calculator to convert milligrams (mg) to milliliters (mL) and mL to mg based on liquid concentration. Fast, accurate, and easy unit conversion.',
+    title: 'MG to ML Conversion &amp; Calculator Hub | MGMLCalculator.com',
+    description: 'Comprehensive conversion hub for milligrams (mg) and milliliters (mL). Access dedicated calculators, multi-concentration charts, and metric liquid conversion guides.',
     render: renderHomePage,
     calcMode: 'mg-to-ml',
     schema: [
@@ -256,8 +256,8 @@ export const ROUTES = {
     ]
   },
   '/mg-to-ml-drug-conversion/': {
-    title: 'MG to ML Drug Conversion: Understanding Concentration',
-    description: 'Understand mg to mL drug conversion and liquid concentration. Learn how mg/mL relates mass in milligrams to volume in milliliters with formulas and examples.',
+    title: 'MG to ML Drug Conversion: Reading Medicine Labels &amp; Concentration',
+    description: 'Learn how mg to mL drug conversions work on liquid packaging. Understand mg/mL concentration ratios, mg per 5 mL suspension labels, and % w/v strengths.',
     render: renderMgToMlDrugConversionPage,
     schema: [
       {
@@ -565,8 +565,8 @@ export const ROUTES = {
     ]
   },
   '/mg-to-ml-conversion-chart/': {
-    title: 'MG to ML Conversion Chart: Common Values and Formulas',
-    description: 'Use our MG to ML conversion chart to see how milligrams convert to milliliters at stated concentrations. Includes formulas, reference tables, and common values.',
+    title: 'MG to ML Conversion Chart: Multi-Concentration Reference Tables',
+    description: 'Free MG to ML conversion charts across multiple concentrations (2, 5, 10, 20 mg/mL and more). Includes multi-concentration reference tables, formulas, and common metric values.',
     render: renderMgToMlConversionChartPage,
     initEvents: () => initInteractiveChartEvents(10),
     schema: [
