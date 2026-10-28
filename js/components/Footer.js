@@ -43,6 +43,7 @@ export function renderFooter() {
               <li><a href="/mg-vs-ml/" data-link>MG vs ML Difference</a></li>
               <li><a href="/mg-to-ml-drug-conversion/" data-link>Drug Conversion Guide</a></li>
               <li><a href="/mg-to-ml-syringe/" data-link>Syringe Volume Guide</a></li>
+              <li><a href="/blog/" data-link>Educational Blog</a></li>
               <li><a href="/about/" data-link>About Us</a></li>
               <li><a href="/contact/" data-link>Contact Us</a></li>
             </ul>

@@ -18,6 +18,7 @@ import { initConcentrationCalculatorEvents } from './components/ConcentrationCal
 import { renderMgToMlConversionChartPage } from './pages/MgToMlConversionChart.js';
 import { initInteractiveChartEvents } from './components/ConversionChart.js';
 import { renderAboutPage } from './pages/About.js';
+import { renderBlogPage } from './pages/Blog.js';
 import { renderPrivacyPage } from './pages/Privacy.js';
 import { renderTermsPage } from './pages/Terms.js';
 import { renderContactPage } from './pages/Contact.js';
@@ -639,6 +640,37 @@ export const ROUTES = {
             }
           }
         ]
+      }
+    ]
+  },
+  '/blog/': {
+    title: 'Measurement & Conversion Guides | MGMLCalculator',
+    description: 'Explore clear guides to milligrams, milliliters, concentration, measurement units, and conversion formulas with MGMLCalculator.',
+    render: renderBlogPage,
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://mgmlcalculator.com/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Blog',
+            'item': 'https://mgmlcalculator.com/blog/'
+          }
+        ]
+      },
+      {
+        '@type': 'CollectionPage',
+        'name': 'Measurement & Conversion Guides | MGMLCalculator',
+        'description': 'Explore clear guides to milligrams, milliliters, concentration, measurement units, and conversion formulas with MGMLCalculator.',
+        'url': 'https://mgmlcalculator.com/blog/'
       }
     ]
   },

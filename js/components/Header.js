@@ -14,6 +14,7 @@ export function renderHeader(currentPath = '/') {
     { label: 'Home', path: '/' },
     { label: 'MG to ML', path: '/mg-to-ml/' },
     { label: 'ML to MG', path: '/ml-to-mg/' },
+    { label: 'Blog', path: '/blog/' },
     { label: 'About', path: '/about/' }
   ];
 

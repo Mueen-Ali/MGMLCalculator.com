@@ -32,6 +32,7 @@ export default defineConfig({
         mgVsMl: resolve(__dirname, 'mg-vs-ml/index.html'),
         mgMlConcentrationCalculator: resolve(__dirname, 'mg-ml-concentration-calculator/index.html'),
         mgToMlConversionChart: resolve(__dirname, 'mg-to-ml-conversion-chart/index.html'),
+        blog: resolve(__dirname, 'blog/index.html'),
         about: resolve(__dirname, 'about/index.html'),
         privacyPolicy: resolve(__dirname, 'privacy-policy/index.html'),
         terms: resolve(__dirname, 'terms/index.html'),
