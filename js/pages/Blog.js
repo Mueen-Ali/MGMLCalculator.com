@@ -253,8 +253,46 @@ export function renderBlogPage() {
           </p>
         </div>
 
+        <!-- Published Articles Grid -->
+        <div class="blog-articles-grid" id="blog-articles-grid">
+          <article class="blog-card">
+            <a href="/blog/what-does-mg-ml-mean/" class="blog-card-img-link" data-link aria-label="Read What Does mg/mL Mean? Medication Concentration Explained">
+              <div class="blog-card-img-wrap">
+                <img 
+                  src="/images/blog/01-concentration-example.webp" 
+                  alt="What Does mg/mL Mean? Medication Concentration Explained" 
+                  class="blog-card-img" 
+                  width="600" 
+                  height="338" 
+                  loading="lazy" 
+                />
+              </div>
+            </a>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Articles</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="/blog/what-does-mg-ml-mean/" data-link>What Does mg/mL Mean? Medication Concentration Explained</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Understand the abbreviation mg/mL (milligrams per milliliter), how to read the numerator and denominator, convert mg per 5 mL to mg/mL, and calculate liquid concentration and volume accurately.
+              </p>
+              <div class="blog-card-footer">
+                <a href="/blog/what-does-mg-ml-mean/" class="blog-card-read-link" data-link>
+                  <span>Read Full Article</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
         <!-- Tasteful Editorial Status / In Preparation State -->
-        <div class="blog-editorial-status-card">
+        <div class="blog-editorial-status-card" style="margin-top: var(--space-xl);">
           <div class="blog-editorial-badge">
             <svg class="blog-editorial-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10"></circle>
@@ -263,9 +301,9 @@ export function renderBlogPage() {
             Editorial Standards &amp; Active Review
           </div>
 
-          <h3 class="blog-editorial-title">Detailed Educational Articles In Preparation</h3>
+          <h3 class="blog-editorial-title">Upcoming Educational Guides In Preparation</h3>
           <p class="blog-editorial-desc">
-            Our editorial team and clinical/scientific reviewers are actively preparing our inaugural series of in-depth calculation guides. Each article undergoes mathematical verification to ensure exact derivations, unambiguous metric unit definitions, and validated clinical context.
+            Our editorial team and clinical/scientific reviewers are actively preparing further in-depth calculation guides. Each article undergoes mathematical verification to ensure exact derivations, unambiguous metric unit definitions, and validated clinical context.
           </p>
 
           <!-- Editorial Roadmap -->
@@ -296,11 +334,6 @@ export function renderBlogPage() {
           <p class="blog-editorial-footer-note">
             Detailed guides will be published directly to this educational hub upon completion of peer review. In the meantime, all interactive calculators and reference tools below are active and verified.
           </p>
-        </div>
-
-        <!-- Infrastructure for Live Articles Grid (Ready for future published articles) -->
-        <div class="blog-articles-grid" id="blog-articles-grid" style="display: none;" aria-hidden="true">
-          <!-- Real articles will be rendered here once published -->
         </div>
       </section>
 

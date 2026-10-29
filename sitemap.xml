@@ -46,6 +46,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mgmlcalculator.com/blog/what-does-mg-ml-mean/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mgmlcalculator.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -19,6 +19,7 @@ import { renderMgToMlConversionChartPage } from './pages/MgToMlConversionChart.j
 import { initInteractiveChartEvents } from './components/ConversionChart.js';
 import { renderAboutPage } from './pages/About.js';
 import { renderBlogPage } from './pages/Blog.js';
+import { renderWhatDoesMgMlMeanPage } from './pages/articles/WhatDoesMgMlMean.js';
 import { renderPrivacyPage } from './pages/Privacy.js';
 import { renderTermsPage } from './pages/Terms.js';
 import { renderContactPage } from './pages/Contact.js';
@@ -671,6 +672,112 @@ export const ROUTES = {
         'name': 'Measurement & Conversion Guides | MGMLCalculator',
         'description': 'Explore clear guides to milligrams, milliliters, concentration, measurement units, and conversion formulas with MGMLCalculator.',
         'url': 'https://mgmlcalculator.com/blog/'
+      }
+    ]
+  },
+  '/blog/what-does-mg-ml-mean/': {
+    title: 'What Does mg/mL Mean? Medication Concentration Explained | MGMLCalculator',
+    description: 'Learn what the abbreviation mg/mL means on medication labels. Understand concentration ratios, how to convert mg per 5 mL to mg/mL, and calculate liquid volume accurately.',
+    render: renderWhatDoesMgMlMeanPage,
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://mgmlcalculator.com/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Blog',
+            'item': 'https://mgmlcalculator.com/blog/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'What Does mg/mL Mean?',
+            'item': 'https://mgmlcalculator.com/blog/what-does-mg-ml-mean/'
+          }
+        ]
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': 'What Does mg/mL Mean? Medication Concentration Explained',
+        'description': 'Learn what the abbreviation mg/mL means on medication labels. Understand concentration ratios, how to convert mg per 5 mL to mg/mL, and calculate liquid volume accurately.',
+        'url': 'https://mgmlcalculator.com/blog/what-does-mg-ml-mean/',
+        'image': 'https://mgmlcalculator.com/images/blog/01-concentration-example.webp',
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'MGMLCalculator.com',
+          'url': 'https://mgmlcalculator.com',
+          'logo': {
+            '@type': 'ImageObject',
+            'url': 'https://mgmlcalculator.com/logo.png'
+          }
+        },
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': 'https://mgmlcalculator.com/blog/what-does-mg-ml-mean/'
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'What does 20 mg/mL mean?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'It means that every 1 mL of the liquid contains 20 mg of the specified substance. The total amount in a larger volume depends on how many milliliters are present.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do you convert 250 mg/5 mL to mg/mL?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Divide 250 mg by 5 mL. The result is 50 mg/mL. This is a concentration conversion, not a recommendation about how much medication to take.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between 50 mg/mL and 50 mg/5 mL?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A concentration of 50 mg/mL means 50 mg in each milliliter. A label stating 50 mg/5 mL means 50 mg in 5 mL, equivalent to 10 mg/mL. The first concentration is five times the second.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does a higher concentration mean a higher prescribed dose?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Concentration describes the amount of substance per unit of liquid volume. A prescribed dose is a separate matter and depends on the specific medication and clinical instructions. A higher concentration does not automatically mean a higher prescribed dose.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can two bottles of the same medicine have different strengths?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. The same active ingredient may be available in different concentrations or formulations. Check the exact label and confirm with a pharmacist before assuming that products can be substituted or that the same volume applies to both.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can a concentration calculator confirm that a dose is safe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. A concentration calculator can help with arithmetic when the inputs are correct, but it cannot confirm a diagnosis, verify a prescription, assess an individual patient, or determine whether a dose is safe. Medication decisions should follow the relevant product instructions and qualified healthcare guidance.'
+            }
+          }
+        ]
       }
     ]
   },
