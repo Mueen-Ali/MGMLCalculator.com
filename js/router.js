@@ -908,6 +908,42 @@ export function initRouter() {
     }
   });
 
-  // Initial render based on current URL path
-  navigateTo(window.location.pathname, false);
+  // Initial page hydration / render check
+  const appContainer = document.getElementById('app');
+  const normPath = normalizePath(window.location.pathname);
+  const route = ROUTES[normPath];
+  const hasPreRenderedContent = Boolean(appContainer && appContainer.firstElementChild);
+
+  // Check whether the pre-rendered document matches the current URL
+  const canonicalLink = document.querySelector('link[rel="canonical"]');
+  let isMatchingPreRender = false;
+  if (canonicalLink) {
+    const canonicalHref = canonicalLink.getAttribute('href') || '';
+    const canonicalPath = normalizePath(canonicalHref.replace(/^https?:\/\/[^/]+/, ''));
+    isMatchingPreRender = (canonicalPath === normPath);
+  }
+
+  // Pre-rendered 404 page check: avoid clobbering 404 on initial load
+  const isPreRendered404 = hasPreRenderedContent && (
+    !route ||
+    document.title.includes('404') ||
+    Boolean(document.querySelector('meta[name="robots"][content*="noindex"]'))
+  );
+
+  if (hasPreRenderedContent && (isMatchingPreRender || isPreRendered404)) {
+    // 1. Page is already pre-rendered: hydrate event listeners without clobbering DOM or scroll
+    initHeaderEvents();
+
+    if (route) {
+      if (route.calcMode) {
+        initCalculatorEvents(route.calcMode);
+      }
+      if (route.initEvents) {
+        route.initEvents();
+      }
+    }
+  } else {
+    // 2. Dynamic fallback: container is empty or pre-rendered page does not match current URL
+    navigateTo(window.location.pathname, false);
+  }
 }

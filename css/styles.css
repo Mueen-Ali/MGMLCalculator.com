@@ -213,6 +213,7 @@ main {
   display: block;
   height: 48px;
   width: auto;
+  aspect-ratio: 168 / 54;
   max-width: 190px;
   object-fit: contain;
   transition: opacity var(--transition-fast);
