@@ -34,6 +34,7 @@ export default defineConfig({
         mgToMlConversionChart: resolve(__dirname, 'mg-to-ml-conversion-chart/index.html'),
         blog: resolve(__dirname, 'blog/index.html'),
         whatDoesMgMlMean: resolve(__dirname, 'blog/what-does-mg-ml-mean/index.html'),
+        howToCalculateMgMlConcentrationFormulaAndExamples: resolve(__dirname, 'blog/how-to-calculate-mg-ml-concentration-formula-and-examples/index.html'),
         about: resolve(__dirname, 'about/index.html'),
         privacyPolicy: resolve(__dirname, 'privacy-policy/index.html'),
         terms: resolve(__dirname, 'terms/index.html'),
