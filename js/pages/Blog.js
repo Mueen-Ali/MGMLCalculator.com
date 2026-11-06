@@ -255,6 +255,42 @@ export function renderBlogPage() {
 
         <!-- Published Articles Grid -->
         <div class="blog-articles-grid" id="blog-articles-grid">
+          <!-- Card: How to Convert mg to mL Using Concentration: Step-by-Step Examples -->
+          <article class="blog-card">
+            <a href="/blog/how-to-convert-mg-to-ml-using-concentration/" class="blog-card-img-link" data-link aria-label="Read How to Convert mg to mL Using Concentration: Step-by-Step Examples">
+              <div class="blog-card-img-wrap">
+                <img
+                  src="/images/blog/how-to-convert-mg-to-ml-using-concentration.webp"
+                  alt="How to Convert mg to mL Using Concentration: Step-by-Step Examples"
+                  class="blog-card-img"
+                  width="600"
+                  height="338"
+                  loading="lazy"
+                />
+              </div>
+            </a>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-category">Articles</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="/blog/how-to-convert-mg-to-ml-using-concentration/" data-link>How to Convert mg to mL Using Concentration: Step-by-Step Examples</a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Learn how to convert milligrams (mg) to milliliters (mL) using liquid concentration. Follow the core formula, step-by-step worked examples, and medicine label calculations.
+              </p>
+              <div class="blog-card-footer">
+                <a href="/blog/how-to-convert-mg-to-ml-using-concentration/" class="blog-card-read-link" data-link>
+                  <span>Read Full Article</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
           <!-- Card: How to Calculate mg/mL Concentration: Formula and Examples -->
           <article class="blog-card">
             <a href="/blog/how-to-calculate-mg-ml-concentration-formula-and-examples/" class="blog-card-img-link" data-link aria-label="Read How to Calculate mg/mL Concentration: Formula and Examples">

@@ -21,6 +21,7 @@ import { renderAboutPage } from './pages/About.js';
 import { renderBlogPage } from './pages/Blog.js';
 import { renderWhatDoesMgMlMeanPage } from './pages/articles/WhatDoesMgMlMean.js';
 import { renderHowToCalculateMgMlConcentrationPage } from './pages/articles/HowToCalculateMgMlConcentration.js';
+import { renderHowToConvertMgToMlUsingConcentrationPage } from './pages/articles/HowToConvertMgToMlUsingConcentration.js';
 import { renderPrivacyPage } from './pages/Privacy.js';
 import { renderTermsPage } from './pages/Terms.js';
 import { renderContactPage } from './pages/Contact.js';
@@ -866,6 +867,96 @@ export const ROUTES = {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'No. Milligrams measure mass, while mg/mL measures concentration. A concentration of 5 mg/mL means that every milliliter contains 5 mg of the substance, assuming the solution is evenly mixed.'
+            }
+          }
+        ]
+      }
+    ]
+  },
+  '/blog/how-to-convert-mg-to-ml-using-concentration/': {
+    title: 'How to Convert mg to mL Using Concentration: Step-by-Step Examples | MGMLCalculator',
+    description: 'Learn how to convert mg to mL using concentration. Follow the simple formula, worked examples, medicine label calculations, and step-by-step conversion instructions.',
+    render: renderHowToConvertMgToMlUsingConcentrationPage,
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://mgmlcalculator.com/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Blog',
+            'item': 'https://mgmlcalculator.com/blog/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'How to Convert mg to mL Using Concentration',
+            'item': 'https://mgmlcalculator.com/blog/how-to-convert-mg-to-ml-using-concentration/'
+          }
+        ]
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': 'How to Convert mg to mL Using Concentration: Step-by-Step Examples',
+        'description': 'Learn how to convert mg to mL using concentration. Follow the simple formula, worked examples, medicine label calculations, and step-by-step conversion instructions.',
+        'url': 'https://mgmlcalculator.com/blog/how-to-convert-mg-to-ml-using-concentration/',
+        'image': 'https://mgmlcalculator.com/images/blog/how-to-convert-mg-to-ml-using-concentration.webp',
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'MGMLCalculator.com',
+          'url': 'https://mgmlcalculator.com',
+          'logo': {
+            '@type': 'ImageObject',
+            'url': 'https://mgmlcalculator.com/logo.png'
+          }
+        },
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': 'https://mgmlcalculator.com/blog/how-to-convert-mg-to-ml-using-concentration/'
+        }
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'What Is the Formula for Converting mg to mL?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The formula is: Volume (mL) = Mass (mg) ÷ Concentration (mg/mL). You need the mass and the concentration to calculate the volume. For example, 100 mg at 20 mg/mL corresponds to 5 mL.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How Many mL Is 250 mg?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'There is no single answer without knowing the concentration. At 50 mg/mL, 250 mg corresponds to 5 mL. At a different concentration, the volume will be different.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What Does 125 mg/5 mL Mean?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'It means that 5 mL of the specified liquid contains 125 mg of the substance. Dividing 125 by 5 gives a concentration of 25 mg/mL.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I Use This Calculation for Liquid Medicine?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The formula can calculate volume from a known mass and concentration, but the calculation alone cannot establish whether a medication dose is appropriate. Use the exact product concentration and follow the prescribed instructions. If anything is unclear, consult a pharmacist or qualified healthcare professional.'
             }
           }
         ]
