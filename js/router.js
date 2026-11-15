@@ -22,6 +22,7 @@ import { renderBlogPage } from './pages/Blog.js';
 import { renderWhatDoesMgMlMeanPage } from './pages/articles/WhatDoesMgMlMean.js';
 import { renderHowToCalculateMgMlConcentrationPage } from './pages/articles/HowToCalculateMgMlConcentration.js';
 import { renderHowToConvertMgToMlUsingConcentrationPage } from './pages/articles/HowToConvertMgToMlUsingConcentration.js';
+import { renderHowToCalculateLiquidMedicationConcentrationPage } from './pages/articles/HowToCalculateLiquidMedicationConcentration.js';
 import { renderPrivacyPage } from './pages/Privacy.js';
 import { renderTermsPage } from './pages/Terms.js';
 import { renderContactPage } from './pages/Contact.js';
@@ -960,6 +961,58 @@ export const ROUTES = {
             }
           }
         ]
+      }
+    ]
+  },
+  '/blog/how-to-calculate-liquid-medication-concentration-in-mg-ml/': {
+    title: 'How to Calculate Liquid Medication Concentration in mg/mL | MGMLCalculator',
+    description: 'Learn how to calculate liquid medication concentration in mg/mL from product labels. Understand mg per 5 mL conversions, powder reconstitution, and safety checks.',
+    render: renderHowToCalculateLiquidMedicationConcentrationPage,
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://mgmlcalculator.com/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Blog',
+            'item': 'https://mgmlcalculator.com/blog/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'How to Calculate Liquid Medication Concentration in mg/mL',
+            'item': 'https://mgmlcalculator.com/blog/how-to-calculate-liquid-medication-concentration-in-mg-ml/'
+          }
+        ]
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': 'How to Calculate Liquid Medication Concentration in mg/mL',
+        'description': 'Learn how to calculate liquid medication concentration in mg/mL from product labels. Understand mg per 5 mL conversions, powder reconstitution, and safety checks.',
+        'url': 'https://mgmlcalculator.com/blog/how-to-calculate-liquid-medication-concentration-in-mg-ml/',
+        'image': 'https://mgmlcalculator.com/images/blog/how-to-calculate-liquid-medication-concentration-in-mg-ml.png',
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'MGMLCalculator.com',
+          'url': 'https://mgmlcalculator.com',
+          'logo': {
+            '@type': 'ImageObject',
+            'url': 'https://mgmlcalculator.com/logo.png'
+          }
+        },
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': 'https://mgmlcalculator.com/blog/how-to-calculate-liquid-medication-concentration-in-mg-ml/'
+        }
       }
     ]
   },
