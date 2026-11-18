@@ -23,6 +23,7 @@ import { renderWhatDoesMgMlMeanPage } from './pages/articles/WhatDoesMgMlMean.js
 import { renderHowToCalculateMgMlConcentrationPage } from './pages/articles/HowToCalculateMgMlConcentration.js';
 import { renderHowToConvertMgToMlUsingConcentrationPage } from './pages/articles/HowToConvertMgToMlUsingConcentration.js';
 import { renderHowToCalculateLiquidMedicationConcentrationPage } from './pages/articles/HowToCalculateLiquidMedicationConcentration.js';
+import { renderHowToCalculateMgPerKgPage } from './pages/articles/HowToCalculateMgPerKg.js';
 import { renderPrivacyPage } from './pages/Privacy.js';
 import { renderTermsPage } from './pages/Terms.js';
 import { renderContactPage } from './pages/Contact.js';
@@ -1012,6 +1013,58 @@ export const ROUTES = {
         'mainEntityOfPage': {
           '@type': 'WebPage',
           '@id': 'https://mgmlcalculator.com/blog/how-to-calculate-liquid-medication-concentration-in-mg-ml/'
+        }
+      }
+    ]
+  },
+  '/blog/how-to-calculate-mg-per-kg/': {
+    title: 'How to Calculate mg per kg: Understanding Weight-Based Measurements | MGMLCalculator',
+    description: 'Learn how to calculate mg per kg for weight-based measurements. Follow the step-by-step formula, lb to kg conversions, worked examples, and safety checks.',
+    render: renderHowToCalculateMgPerKgPage,
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://mgmlcalculator.com/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': 'Blog',
+            'item': 'https://mgmlcalculator.com/blog/'
+          },
+          {
+            '@type': 'ListItem',
+            'position': 3,
+            'name': 'How to Calculate mg per kg',
+            'item': 'https://mgmlcalculator.com/blog/how-to-calculate-mg-per-kg/'
+          }
+        ]
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': 'How to Calculate mg per kg: Understanding Weight-Based Measurements',
+        'description': 'Learn how to calculate mg per kg for weight-based measurements. Follow the step-by-step formula, lb to kg conversions, worked examples, and safety checks.',
+        'url': 'https://mgmlcalculator.com/blog/how-to-calculate-mg-per-kg/',
+        'image': 'https://mgmlcalculator.com/images/blog/how-to-calculate-mg-per-kg.png',
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'MGMLCalculator.com',
+          'url': 'https://mgmlcalculator.com',
+          'logo': {
+            '@type': 'ImageObject',
+            'url': 'https://mgmlcalculator.com/logo.png'
+          }
+        },
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': 'https://mgmlcalculator.com/blog/how-to-calculate-mg-per-kg/'
         }
       }
     ]
